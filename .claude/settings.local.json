@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python manage.py --help)",
+      "Bash(python3:*)",
+      "Bash(uv --version)",
+      "Bash(python manage.py startapp feeds)",
+      "Bash(python manage.py startapp articles)",
+      "Bash(redis-cli ping *)",
+      "Bash(.venv/bin/python -c \"import django; print\\(django.__version__\\)\")",
+      "Bash(.venv/bin/python *)",
+      "Bash(docker --version)",
+      "Bash(docker compose *)",
+      "Bash(ls /home/dom/Documents/python/django_projects/offline_news/README*)",
+      "Bash(xargs ls *)",
+      "Bash(grep -E \"^d|\\\\.py$|\\\\.toml$\")",
+      "Bash(python *)",
+      "Bash(uv sync *)",
+      "Bash(uv run *)"
+    ]
+  }
+}

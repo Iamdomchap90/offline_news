@@ -1,0 +1,24 @@
+[project]
+name = "offline-news"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+dependencies = [
+    "django>=4.2,<5.0",
+    "celery[redis]>=5.3",
+    "django-celery-beat>=2.6",
+    "redis>=5.0",
+    "feedparser>=6.0",
+    "trafilatura>=1.9",
+    "requests>=2.31",
+    "django-environ>=0.11",
+    "lxml>=4.9",
+    "psycopg2-binary>=2.9",
+    "gunicorn>=21.0",
+    "whitenoise>=6.6",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=8.0",
+]
