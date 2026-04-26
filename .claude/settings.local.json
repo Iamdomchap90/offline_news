@@ -16,7 +16,9 @@
       "Bash(grep -E \"^d|\\\\.py$|\\\\.toml$\")",
       "Bash(python *)",
       "Bash(uv sync *)",
-      "Bash(uv run *)"
+      "Bash(uv run *)",
+      "Bash(uv add *)",
+      "Bash(env)"
     ]
   }
 }

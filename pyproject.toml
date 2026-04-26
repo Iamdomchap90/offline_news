@@ -16,9 +16,46 @@ dependencies = [
     "psycopg2-binary>=2.9",
     "gunicorn>=21.0",
     "whitenoise>=6.6",
+    "django-ninja>=1.6.2",
 ]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+exclude = '''
+/(
+    \.venv
+  | venv
+  | site-packages
+)/
+'''
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = [
+    "E203",  # conflicts with Black’s formatting
+]
+exclude = [
+    ".venv",
+    "venv",
+    "site-packages",
+    "**/migrations/*",   # ignore Django migrations
+]
+
+[tool.ruff]
+# Ruff replaces flake8 + isort for most modern setups
+line-length = 88
+fix = true
+exclude = [".venv", "venv", "site-packages", "**/migrations/*"]
 
 [dependency-groups]
 dev = [
+    "black>=26.3.1",
+    "ruff>=0.1",  # replace flake8 + isort
+    "mypy>=1.20.2",
     "ipython>=8.0",
 ]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+DJANGO_SETTINGS_MODULE = "offline_news.settings"
